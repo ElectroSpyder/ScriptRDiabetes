@@ -27,9 +27,13 @@ par(mar = c(1,1,1,1))
 plot(x = Dato.Clasificacion, type = "proportional")
 text(x = Dato.Clasificacion, splits = TRUE, pretty = 0, cex = 0.7, col = "firebrick")
 Dato.Predicciones = predict(Dato.Clasificacion, newdata = Dato.Prueba, type="class")
+
 table(Dato.Predicciones,Dato.Prueba$Diabetes)
+
 summary(Dato.Predicciones)
+
 nrow(Dato.Predicciones)
+nrow(Dato.Prueba)
 nrow(Dato.Prueba)
 
 table(Dato.Clasificacion,Dato.Train$Diabetes, type="class")
